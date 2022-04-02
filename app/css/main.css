@@ -1,0 +1,30 @@
+.mdl-navigation .mdl-navigation__link {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.mdl-data-table .mdl-data-table__cell--non-numeric{
+    font-size: 20px;
+    color: white;
+}
+
+.mdl-data-table__cell--non-numeric.table_rows{
+    font-size: 15px;
+    color: black;
+}
+.mdl-data-table__cell--non-numeric.table_headers{
+    font-size: 20px;    
+    color: black;
+}
+
+.table_headings{
+    background-color: #2f6e33;
+}
+
+.mdl-chip__text {
+    font-size: 25px;
+}
+.mdl-data-table.mdl-js-data-table{
+    width: 100%;
+}

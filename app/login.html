@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_green-blue.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Uses a header that scrolls with the text, rather than staying
+          locked at the top -->
+        <div class="mdl-layout mdl-js-layout mdl-js-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <a class="mdl-navigation__link" href="index.html"><img src='img/bigLogo.png' width='100' height='50'></a>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- No Navigation -->
+                </div>
+            </header>
+            <main class="mdl-layout__content">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--2-col-tablet"></div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--2-col-tablet">
+                            <center>
+                                <div class="mdl-card">
+                                    <div>
+                                        <span class="mdl-chip">
+                                            <span class="mdl-chip__text">Login</span>
+                                        </span><br>
+                                    </div>
+                                    <!-- Enter User Name -->
+                                    <div class="mdl-textfield mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="text" id="userNameInput">
+                                        <label class="mdl-textfield__label" for="userNameInput">Enter Username/Email Address</label>
+                                    </div>
+                                    <br>
+                                    <!-- Enter Password -->
+                                    <div class="mdl-textfield mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="password" id="passwordInput">
+                                        <label class="mdl-textfield__label" for="passwordInput">Enter Password</label>
+                                    </div>
+                                    <br>
+                                    <!-- Login Button -->
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="logIn()">
+                                        Login
+                                    </button>
+                                    <br>
+                                    <br>
+                                    <!-- Sign Up Button -->
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="location.href='signup.html'">
+                                        Sign Up
+                                    </button>
+                                </div>
+                            </center>
+
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--2-col-tablet"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div id="outputArea"></div>
+        <script src="js/shared.js"></script>
+        <script src="js/login.js"></script>
+    </body>
+</html>

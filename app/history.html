@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_green-blue.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="navigationBarDisplay()">
+    <!-- Uses a header that scrolls with the text, rather than staying
+          locked at the top -->
+    <div class="mdl-layout mdl-js-layout mdl-js-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div id="navigationBarDisplay"></div>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <br><center><span class="mdl-chip">
+                        <span class="mdl-chip__text">History of Trips</span>
+                    </span></center> <br>
+                <center>
+                    <div id=loginNotification>
+                
+                    </div>
+                </center>
+                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                    <thead>
+                        <tr class="table_headings">
+                            <!-- Table Headings-->
+                            <th class="mdl-data-table__cell--non-numeric">Name of Trip</th>
+                            <th class="mdl-data-table__cell--non-numeric">Departure Location</th>
+                            <th class="mdl-data-table__cell--non-numeric">Destination</th>
+                            <th class="mdl-data-table__cell--non-numeric">Number of Stops</th>
+                            <th class="mdl-data-table__cell--non-numeric">Flight Date</th>
+                            <th class="mdl-data-table__cell--non-numeric">View More Details/Map Details</th>
+                        </tr>
+                    </thead>
+                    <tbody id=tripsHistoryTableBody>
+                    </tbody>
+                </table>
+                <center>
+                    <div id="noContentToDisplay"></div>
+                </center>
+            </div>
+        </main>
+    </div>
+    <div id="outputArea"></div>
+    <script src="js/shared.js"></script>
+    <script src="js/history.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_green-blue.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="navigationBarDisplay()">
+        <!-- Uses a header that scrolls with the text, rather than staying
+          locked at the top -->
+          <div class="mdl-layout mdl-js-layout mdl-js-layout--fixed-header">
+            <header class="mdl-layout__header">
+              <div id="navigationBarDisplay"></div>
+            </header>
+            <main class="mdl-layout__content">
+                <div class="page-content">
+                    
+                    <!-- Your content goes here -->
+                    <h1><center><!-- Basic Chip -->
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Summary</span>
+                        </span></center></h1>
+                    <center><table class="mdl-data-table mdl-js-data-table">
+                        <thead>
+                          <tr>
+                            <th class="mdl-data-table__cell--non-numeric"></th>
+                            <th class="mdl-data-table__cell--non-numeric">Trip Detail</th>
+                          </tr>
+                        </thead>
+                        <tbody id="summaryTable">
+                          
+                        </tbody>
+                      </table>
+                    </center>
+                <br>
+                </br>
+                <center><!-- Buttons -->
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="saveTrip()">
+                      Save
+                  </button>
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="cancel()">
+                    Cancel
+                  </button>
+                </center>
+
+                      
+                </div>
+            </main>
+        </div>
+        <div id="outputArea"></div>
+        <script src="js/shared.js"></script>
+        <script src="js/summary.js"></script>
+    </body>
+</html>

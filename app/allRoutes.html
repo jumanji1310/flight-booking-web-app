@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_green-blue.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Map link-->
+        <style type="text/css">
+                #map {
+                    height: calc(100vh - 56px);
+                }
+        </style>
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css' rel='stylesheet' />
+        <!-- load countries library-->
+        <script src="https://eng1003.monash/libs/countries.js"></script>
+        <script src="https://eng1003.monash/libs/services.js"></script>
+    </head>
+    <body onload="navigationBarDisplay()">
+        <!-- Uses a header that scrolls with the text, rather than staying
+          locked at the top -->
+        <div class="mdl-layout mdl-js-layout mdl-js-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div id="navigationBarDisplay"></div>
+            </header>
+            <main class="mdl-layout__content">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div class="mdl-grid">
+                        <!-- Spacer -->
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet"></div>
+                        
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                            <center>
+                            <span class="mdl-chip">
+                                    <span class="mdl-chip__text">All Routes</span>
+                            </span><br>
+                            <br>
+                            <!-- Country Datalist-->
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="countries" list="countriesList">
+                                <label class="mdl-textfield__label" for="countries">Choose Country</label>
+                                <datalist id="countriesList">
+                                  </datalist>
+                            </div>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick ="getData()">
+                                Submit
+                            </button><br>
+                            </center>
+                        </div>
+                        <!-- Spacer -->
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet"></div>
+                    </div>
+                    <div id="map"></div>
+                </div>
+            </main>
+        </div>
+        <div id="outputArea"></div>
+        <script src="js/shared.js"></script>
+        <script src="js/allRoutes.js"></script>
+    </body>
+</html>
